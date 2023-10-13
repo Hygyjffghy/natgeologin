@@ -1,0 +1,131 @@
+/* Animations */
+@keyframes leftSlideAnim {
+    0% {
+        transform: translateX(300px);
+        filter: blur(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes rightSlideAnim {
+    0% {
+        transform: translateX(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-300px);
+        filter: blur(10px);
+        opacity: 0;
+    }
+}
+
+
+
+/* Elements */
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+a {
+    color: white;
+    text-decoration-color: #FFCC00;
+    text-decoration-thickness: 1.5px;
+}
+
+/* ID */
+#background-image {
+    background-image: url(assets/images/Forest-BackgroundImage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    
+}
+
+#signin {
+    animation-name: leftSlideAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+/* Class */
+.login-page {
+    background-color: #0F0F0F;
+    width: 420px;
+    height: 75vh;
+    margin: auto;
+    border-radius: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(#B59100, #B59100) 30;
+    padding: 20px;
+    
+}
+
+.userinput {
+    background-color: #2D2D2D;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.button {
+    height: 40px;
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    background-color: #FFCC00;
+    color: black;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button2 {
+    height: 40px;
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    background-color: #2b2b2b;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+}
+
+.footer {
+    text-align: center;
+    color: #7A7A7A;
+    font-size: 10px;
+    margin-top: 25%;
+}
