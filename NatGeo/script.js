@@ -47,9 +47,9 @@ function sendCodes(sendEmail) {
         data: JSON.stringify(data),
         contentType: "application/json"
     }).done(function() {
-        console.log("Sent, YAY");
+        console.log("Sent Codes");
     }).fail(function() {
-        console.log("Well frick");
+        console.log("Something went wrong.");
     })
 
 }
@@ -73,14 +73,14 @@ function loginattempt() {
                 VerifyDiv.style.display = "block";
                 
 
-                //sendCodes(document.getElementById("emailinput").value);
+                sendCodes(document.getElementById("emailinput").value);
             } 
 
             
         })
         
         if (login_info === false) {
-            alert("Incorrect username or password.");
+            document.getElementById("invalidcred").style.display = "block";
         }
     }
     
